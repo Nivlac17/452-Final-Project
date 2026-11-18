@@ -16,6 +16,16 @@ Use this log to record each project work session. Add a new entry whenever you w
 - **Decisions / notes:** Track the date, actual duration, completed work, decisions, blockers, and next steps for every session.
 - **Next steps:** Add the project requirements and begin the first implementation or research session.
 
+### Session 2 — 2026-11-18 — Setup and project brainstorming
+
+- **Time spent:** 0.5 hours (30 minutes)
+- **Goals:** Review the final project requirements, organize the project workspace, and begin exploring possible project ideas.
+- **Work completed:** Set up the project repository and log; reviewed the requirements to build something personally interesting that reads and writes data, use AI to improve the result, and spend 30–40 hours total. Began brainstorming possible ideas.
+- **Files / features changed:** `project_log.md`
+- **Decisions / notes:** The project idea is still open. Use upcoming conversations to bounce ideas around and narrow toward something motivating and feasible.
+- **Blockers:** No project idea selected yet.
+- **Next steps:** Continue brainstorming and compare ideas for personal interest, data read/write needs, useful AI contribution, and a realistic 30–40-hour scope.
+
 ---
 
 ## Session Entry Template
@@ -38,7 +48,7 @@ Copy this section for each new work session and fill it in with the work complet
 
 | Measure | Total |
 |---|---:|
-| Recorded project work | 0 hours |
+| Recorded project work | 0.5 hours |
 | Target | 30–40 hours |
 
 Update the recorded total after each work session. Exclude administrative setup such as creating this log unless it is part of substantive project work.
