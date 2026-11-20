@@ -26,11 +26,11 @@ Use this log to record each project work session. Add a new entry whenever you w
 - **Blockers:** No project idea selected yet.
 - **Next steps:** Continue brainstorming and compare ideas for personal interest, data read/write needs, useful AI contribution, and a realistic 30–40-hour scope.
 
-### Session 3 — 2026-11-19 — Initial system design and work plan
+### Session 3 — 2026-11-19 — Final project layout and initial design
 
-- **Time spent:** 0.25 hours (15 minutes; planning and design documentation)
-- **Goals:** Define the initial PersonaBuilder scope, data model, system architecture, and daily implementation goals.
-- **Work completed:** Created `initial_design.md` with the project purpose, first-release goals, ERD, proposed technologies, system flow, and a dated daily plan through the last scheduled day of class instruction.
+- **Time spent:** 2 hours
+- **Goals:** Design the final project layout, define the initial PersonaBuilder scope and data model, and document the system architecture and daily implementation goals.
+- **Work completed:** Designed the final project layout and ERD. Created `initial_design.md` with the project purpose, first-release goals, ERD, proposed technologies, system flow, and a dated daily plan through the last scheduled day of class instruction.
 - **Files / features changed:** `initial_design.md`, `project_log.md`
 - **Decisions / notes:** Initial plan uses Next.js and Supabase (Auth, PostgreSQL with pgvector, private Storage), with `.txt` uploads and text Q&A as the first-release scope. Domain hosting still needs confirmation.
 - **Blockers:** Hosting and routing setup for `calvinmerrell.com/PersonaBuilder` is not yet known.
@@ -58,7 +58,7 @@ Copy this section for each new work session and fill it in with the work complet
 
 | Measure | Total |
 |---|---:|
-| Recorded project work | 1 hour 25 minutes (1.42 hours) |
+| Recorded project work | 3 hours 10 minutes (3.17 hours) |
 | Target | 30–40 hours |
 
 Update the recorded total after each work session. Exclude administrative setup such as creating this log unless it is part of substantive project work.
