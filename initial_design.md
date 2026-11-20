@@ -166,7 +166,3 @@ The BYU Fall 2026 calendar lists **December 10, 2026** as the last day of class 
 | Wed, Dec 9 | Deploy to `/PersonaBuilder`, resolve deployment issues, and prepare demo data. |
 | Thu, Dec 10 | Final review/demo, update project log and report notes, and capture remaining limitations. |
 
-## References and Assumptions
-
-- BYU, [Dates & Deadlines](https://catalog.byu.edu/policy/dates-and-deadlines) — Fall 2026 last day of class instruction: December 10.
-- Initial technology choices are a starting point and may be adjusted to match domain hosting access, course expectations, or implementation constraints.

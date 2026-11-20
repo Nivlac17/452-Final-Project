@@ -36,6 +36,16 @@ Use this log to record each project work session. Add a new entry whenever you w
 - **Blockers:** Hosting and routing setup for `calvinmerrell.com/PersonaBuilder` is not yet known.
 - **Next steps:** Confirm the domain's existing host and create the application skeleton and Supabase project.
 
+### Session 4 — 2026-11-19 — Refine initial design document
+
+- **Time spent:** 0.1 hours (6 minutes)
+- **Goals:** Simplify the initial design document as requested.
+- **Work completed:** Removed the references and assumptions section from `initial_design.md`.
+- **Files / features changed:** `initial_design.md`, `project_log.md`
+- **Decisions / notes:** The design document keeps the project summary, diagrams, and implementation plan without the separate references section.
+- **Blockers:** None.
+- **Next steps:** Confirm the domain's existing host and begin application setup.
+
 ---
 
 ## Session Entry Template
@@ -58,7 +68,7 @@ Copy this section for each new work session and fill it in with the work complet
 
 | Measure | Total |
 |---|---:|
-| Recorded project work | 3 hours 10 minutes (3.17 hours) |
+| Recorded project work | 3 hours 16 minutes (3.27 hours) |
 | Target | 30–40 hours |
 
 Update the recorded total after each work session. Exclude administrative setup such as creating this log unless it is part of substantive project work.
