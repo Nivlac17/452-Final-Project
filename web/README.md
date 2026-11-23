@@ -5,7 +5,7 @@ This is the Next.js application for PersonaBuilder. The intended deployment path
 ## Local setup
 
 1. Install Node.js (18.18+ recommended) and npm.
-2. Copy `.env.example` to `.env.local` and fill in the Supabase project URL, public anon key, and OpenAI API key. Keep `.env.local` private; it is ignored by Git.
+2. Copy `.env.example` to `.env.local` and fill in the Supabase project URL, publishable key (or legacy anon key), and OpenAI API key. Keep `.env.local` private; it is ignored by Git.
 3. In Supabase, run `supabase/migrations/0001_initial_schema.sql` in the SQL Editor. This enables pgvector, creates the schema and owner policies, and creates private Storage buckets.
 4. In Supabase Auth, enable Google as a provider and register the OAuth redirect URL for local development (`http://localhost:3000/PersonaBuilder/auth/callback`) and the production site.
 5. From this directory, run `npm run dev` and open `http://localhost:3000/PersonaBuilder`.

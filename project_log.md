@@ -56,6 +56,16 @@ Use this log to record each project work session. Add a new entry whenever you w
 - **Blockers:** Need a Supabase project URL and public key, an OpenAI API key, and the name/configuration of the current domain host to complete OAuth and deployment.
 - **Next steps:** Create the Supabase project and apply `web/supabase/migrations/0001_initial_schema.sql`; configure Google OAuth; add local environment variables; identify hosting provider.
 
+### Session 6 — 2026-11-23 — Support Supabase publishable key
+
+- **Time spent:** 0.1 hours (6 minutes)
+- **Goals:** Make the app accept the Supabase key format available in the user's project settings.
+- **Work completed:** Updated browser, server, and session-refresh clients to accept `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, while retaining support for the legacy anon-key variable. Updated the environment example and setup guide.
+- **Files / features changed:** Supabase client configuration, `.env.example`, `README.md`, `project_log.md`
+- **Decisions / notes:** Use the Supabase URL without escape backslashes and the publishable key variable name in `.env.local`.
+- **Blockers:** OpenAI key and Google OAuth still need configuration.
+- **Next steps:** Save the corrected Supabase URL and complete publishable key in `web/.env.local`; then configure Google OAuth and OpenAI.
+
 ---
 
 ## Session Entry Template
@@ -78,7 +88,7 @@ Copy this section for each new work session and fill it in with the work complet
 
 | Measure | Total |
 |---|---:|
-| Recorded project work | 4 hours 16 minutes (4.27 hours) |
+| Recorded project work | 4 hours 22 minutes (4.37 hours) |
 | Target | 30–40 hours |
 
 Update the recorded total after each work session. Exclude administrative setup such as creating this log unless it is part of substantive project work.
