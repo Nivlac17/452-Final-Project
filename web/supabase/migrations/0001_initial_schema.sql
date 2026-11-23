@@ -96,6 +96,14 @@ alter table public.chunks enable row level security;
 alter table public.conversations enable row level security;
 alter table public.messages enable row level security;
 
+grant select, insert, update, delete on table
+  public.personas,
+  public.documents,
+  public.chunks,
+  public.conversations,
+  public.messages
+to authenticated;
+
 create policy "Owners manage personas" on public.personas
   for all to authenticated using ((select auth.uid()) = user_id)
   with check ((select auth.uid()) = user_id);

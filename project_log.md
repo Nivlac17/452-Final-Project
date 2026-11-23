@@ -118,6 +118,16 @@ Use this log to record each project work session. Add a new entry whenever you w
 - **Blockers:** The Supabase Auth Site URL and allowed redirect list have not been verified directly. Google OAuth remains deferred.
 - **Next steps:** Retry image/text uploads in the production app, then configure the Auth redirect settings if confirmation emails still return to localhost.
 
+### Session 12 — 2026-11-23 — Fix persona table permissions
+
+- **Time spent:** 0.1 hours (6 minutes)
+- **Goals:** Resolve the production `permission denied for table personas` error.
+- **Work completed:** Confirmed the app tables had RLS enabled but no SQL privileges for the `authenticated` role. Granted the required table operations on personas, documents, chunks, conversations, and messages. Verified the grants are present and RLS remains enabled.
+- **Files / features changed:** `web/supabase/migrations/0001_initial_schema.sql`; Supabase production table privileges; `project_log.md`.
+- **Decisions / notes:** Existing owner-only RLS policies remain the row-level access control; the grants allow authenticated requests to reach those policies.
+- **Blockers:** A signed-in persona submission was not available to test from this session.
+- **Next steps:** Retry submitting a persona in the production app and report any remaining error.
+
 ## Session Entry Template
 
 Copy this section for each new work session and fill it in with the work completed.
@@ -138,7 +148,7 @@ Copy this section for each new work session and fill it in with the work complet
 
 | Measure | Total |
 |---|---:|
-| Recorded project work | 5 hours 58 minutes (5.97 hours) |
+| Recorded project work | 6 hours 4 minutes (6.07 hours) |
 | Target | 30–40 hours |
 
 Update the recorded total after each work session. Exclude administrative setup such as creating this log unless it is part of substantive project work.
