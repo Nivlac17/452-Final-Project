@@ -88,6 +88,16 @@ Use this log to record each project work session. Add a new entry whenever you w
 - **Blockers:** The Supabase CLI has no access token on this device, so the database migration and `process-document` / `ask-persona` Edge Functions could not be applied or deployed. The OpenAI key still needs to be added as a Supabase Edge Function secret.
 - **Next steps:** Authenticate the Supabase CLI with `npx supabase login`, then apply the migration, deploy both functions, and set the OpenAI secret. Google OAuth can be configured later if desired.
 
+### Session 9 — 2026-11-23 — Fix production email confirmation redirect
+
+- **Time spent:** 0.1 hours (6 minutes)
+- **Goals:** Stop new production account confirmation emails from falling back to a localhost URL.
+- **Work completed:** Updated signup to pass the current PersonaBuilder URL as Supabase's email redirect; updated setup documentation to use the production app URL as the Supabase Site URL and retain localhost only as a development redirect. Built and deployed the website; the deployment succeeded and the live route returns HTTP 200.
+- **Files / features changed:** Website repository signup flow and README; `web/README.md`; `project_log.md`.
+- **Decisions / notes:** Google OAuth remains deferred. The app now requests `https://calvinmerrell.com/PersonaBuilder/` for confirmations created on production.
+- **Blockers:** Supabase Auth URL Configuration has not been verified directly because Supabase CLI access is not configured on this device. Ensure the production URL is present in the allowed redirect list; the frontend cannot override a redirect rejected by Supabase.
+- **Next steps:** Authenticate the Supabase CLI with `npx supabase login`; verify Supabase Auth URL settings; apply the migration, deploy both Edge Functions, and add the OpenAI secret.
+
 ## Session Entry Template
 
 Copy this section for each new work session and fill it in with the work completed.
@@ -108,7 +118,7 @@ Copy this section for each new work session and fill it in with the work complet
 
 | Measure | Total |
 |---|---:|
-| Recorded project work | 5 hours 34 minutes (5.57 hours) |
+| Recorded project work | 5 hours 40 minutes (5.67 hours) |
 | Target | 30–40 hours |
 
 Update the recorded total after each work session. Exclude administrative setup such as creating this log unless it is part of substantive project work.

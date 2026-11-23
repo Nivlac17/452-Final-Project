@@ -6,11 +6,11 @@ The deployed frontend lives in the `vite-calvinmerrell.com` folder of the `Nivla
 
 1. Create a Supabase project.
 2. Apply `supabase/migrations/0001_initial_schema.sql` in the Supabase SQL Editor. This enables pgvector, creates the persona/document/conversation tables, owner-only row-level security policies, and private Storage buckets.
-3. In **Authentication → Providers**, enable Email and Google. Supabase Auth manages email/password accounts and stores password hashes; PersonaBuilder does not write passwords into application tables.
-4. In **Authentication → URL Configuration**, set the site URL to `https://calvinmerrell.com` and add these allowed redirect URLs:
+3. In **Authentication → Providers**, enable Email. Supabase Auth manages email/password accounts and stores password hashes; PersonaBuilder does not write passwords into application tables. Google sign-in can be configured later if needed.
+4. In **Authentication → URL Configuration**, set the site URL to `https://calvinmerrell.com/PersonaBuilder/` and add these allowed redirect URLs:
    - `https://calvinmerrell.com/PersonaBuilder/`
    - `http://localhost:5173/PersonaBuilder/`
-5. In Google Cloud OAuth, add your domain and `http://localhost:5173` as authorized JavaScript origins. Add the Supabase callback URL shown in Supabase’s Google provider settings as an authorized redirect URI. Paste the Google client ID and secret into that provider in Supabase.
+5. Google OAuth is optional for now. If you enable it later, add your domain and `http://localhost:5173` as authorized JavaScript origins, then add the Supabase callback URL shown in the Google provider settings as an authorized redirect URI.
 6. From this `web/` folder, use the Supabase CLI to link the project and deploy both functions:
 
    ```sh
