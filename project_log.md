@@ -78,6 +78,16 @@ Use this log to record each project work session. Add a new entry whenever you w
 - **Blockers:** Before production works, apply the database migration, deploy both Edge Functions, add the OpenAI secret in Supabase, configure Google OAuth and Supabase redirect URLs, and add `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY` to website repository Actions secrets. Publishing the website requires pushing its `main` branch, which triggers deployment.
 - **Next steps:** Complete the external Supabase and Google settings, add the website Actions secrets, then publish the website changes.
 
+### Session 8 — 2026-11-23 — Deploy PersonaBuilder website
+
+- **Time spent:** 0.2 hours (12 minutes)
+- **Goals:** Finish the website setup and deploy PersonaBuilder while deferring Google sign-in.
+- **Work completed:** Added the Supabase project URL and publishable key to the website repository's GitHub Actions secrets; built and pushed the pending website commit to `main`; confirmed the GitHub Pages workflow succeeded and `/PersonaBuilder/` returns HTTP 200.
+- **Files / features changed:** Website repository deployment and Actions secrets; `project_log.md`.
+- **Decisions / notes:** Email/password sign-in is available in the deployed frontend. Google OAuth remains deferred as requested. The production frontend is live at `https://calvinmerrell.com/PersonaBuilder/`.
+- **Blockers:** The Supabase CLI has no access token on this device, so the database migration and `process-document` / `ask-persona` Edge Functions could not be applied or deployed. The OpenAI key still needs to be added as a Supabase Edge Function secret.
+- **Next steps:** Authenticate the Supabase CLI with `npx supabase login`, then apply the migration, deploy both functions, and set the OpenAI secret. Google OAuth can be configured later if desired.
+
 ## Session Entry Template
 
 Copy this section for each new work session and fill it in with the work completed.
@@ -98,7 +108,7 @@ Copy this section for each new work session and fill it in with the work complet
 
 | Measure | Total |
 |---|---:|
-| Recorded project work | 5 hours 22 minutes (5.37 hours) |
+| Recorded project work | 5 hours 34 minutes (5.57 hours) |
 | Target | 30–40 hours |
 
 Update the recorded total after each work session. Exclude administrative setup such as creating this log unless it is part of substantive project work.
