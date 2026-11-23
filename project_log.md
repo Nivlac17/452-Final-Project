@@ -68,6 +68,16 @@ Use this log to record each project work session. Add a new entry whenever you w
 
 ---
 
+### Session 7 — 2026-11-23 — Connect PersonaBuilder to hosted website
+
+- **Time spent:** 1 hour (estimated active project work)
+- **Goals:** Connect PersonaBuilder to the existing GitHub Pages website, support email/password and Google sign-in, and prepare the Supabase AI backend.
+- **Work completed:** Added the PersonaBuilder sign-in and persona screens to the Vite site at `/PersonaBuilder/`; wired Supabase Auth, profile image and text-file storage, saved chat history, and calls to authenticated Edge Functions. Added server-side functions for chunking and embedding uploads and generating source-grounded answers. Added the top navigation button, a static route for GitHub Pages, workflow environment wiring, local public Supabase configuration, and setup documentation. The production site build succeeds.
+- **Files / features changed:** Website repository `vite-calvinmerrell.com/` app, workflow, and README; `web/supabase/functions/`, `web/supabase/config.toml`, `web/README.md`, and `project_log.md`.
+- **Decisions / notes:** Supabase Auth handles passwords; the app does not store plaintext passwords in project tables. The OpenAI key stays server-side and must be added as a Supabase Edge Function secret. GitHub Pages requires the Supabase URL and publishable key as GitHub Actions secrets.
+- **Blockers:** Before production works, apply the database migration, deploy both Edge Functions, add the OpenAI secret in Supabase, configure Google OAuth and Supabase redirect URLs, and add `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY` to website repository Actions secrets. Publishing the website requires pushing its `main` branch, which triggers deployment.
+- **Next steps:** Complete the external Supabase and Google settings, add the website Actions secrets, then publish the website changes.
+
 ## Session Entry Template
 
 Copy this section for each new work session and fill it in with the work completed.
@@ -88,7 +98,7 @@ Copy this section for each new work session and fill it in with the work complet
 
 | Measure | Total |
 |---|---:|
-| Recorded project work | 4 hours 22 minutes (4.37 hours) |
+| Recorded project work | 5 hours 22 minutes (5.37 hours) |
 | Target | 30–40 hours |
 
 Update the recorded total after each work session. Exclude administrative setup such as creating this log unless it is part of substantive project work.
