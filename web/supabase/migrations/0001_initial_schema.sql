@@ -78,13 +78,13 @@ language sql stable
 set search_path = ''
 as $$
   select c.id, c.document_id, d.file_name, c.chunk_index, c.content,
-         (1 - (c.embedding <=> query_embedding))::real as similarity
+         (1 - (c.embedding OPERATOR(extensions.<=>) query_embedding))::real as similarity
   from public.chunks c
   join public.documents d on d.id = c.document_id
   where c.persona_id = match_persona_id
     and c.user_id = (select auth.uid())
     and d.status = 'ready'
-  order by c.embedding <=> query_embedding
+  order by c.embedding OPERATOR(extensions.<=>) query_embedding
   limit least(greatest(match_count, 1), 12);
 $$;
 revoke execute on function public.match_persona_chunks(extensions.vector, uuid, integer) from public;

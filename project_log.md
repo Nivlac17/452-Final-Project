@@ -108,6 +108,16 @@ Use this log to record each project work session. Add a new entry whenever you w
 - **Blockers:** Supabase CLI access token is still missing, so the Auth URL configuration cannot be verified and backend setup remains pending.
 - **Next steps:** Authenticate the Supabase CLI with `npx supabase login`; verify the production Auth redirect allowlist and finish the database/function setup.
 
+### Session 11 — 2026-11-23 — Apply Supabase production setup
+
+- **Time spent:** 0.2 hours (12 minutes)
+- **Goals:** Resolve the deployed Storage “Bucket not found” error and finish the Supabase backend setup.
+- **Work completed:** Applied the schema, private Storage buckets, and owner-only Storage policies to the `PersonaBuilder-Database` production project. Fixed the pgvector operator qualification required by the search function. Added `OPENAI_API_KEY` as an Edge Function secret and deployed `process-document` and `ask-persona`; both report active.
+- **Files / features changed:** `web/supabase/migrations/0001_initial_schema.sql`; Supabase production schema, buckets, policies, functions, and secret; `project_log.md`.
+- **Decisions / notes:** The migration’s SQL function clears `search_path`, so pgvector operators are explicitly schema-qualified. Verified that `personas`, `documents`, the search function, both buckets, and their owner-only policies exist.
+- **Blockers:** The Supabase Auth Site URL and allowed redirect list have not been verified directly. Google OAuth remains deferred.
+- **Next steps:** Retry image/text uploads in the production app, then configure the Auth redirect settings if confirmation emails still return to localhost.
+
 ## Session Entry Template
 
 Copy this section for each new work session and fill it in with the work completed.
@@ -128,7 +138,7 @@ Copy this section for each new work session and fill it in with the work complet
 
 | Measure | Total |
 |---|---:|
-| Recorded project work | 5 hours 46 minutes (5.77 hours) |
+| Recorded project work | 5 hours 58 minutes (5.97 hours) |
 | Target | 30–40 hours |
 
 Update the recorded total after each work session. Exclude administrative setup such as creating this log unless it is part of substantive project work.
