@@ -98,6 +98,16 @@ Use this log to record each project work session. Add a new entry whenever you w
 - **Blockers:** Supabase Auth URL Configuration has not been verified directly because Supabase CLI access is not configured on this device. Ensure the production URL is present in the allowed redirect list; the frontend cannot override a redirect rejected by Supabase.
 - **Next steps:** Authenticate the Supabase CLI with `npx supabase login`; verify Supabase Auth URL settings; apply the migration, deploy both Edge Functions, and add the OpenAI secret.
 
+### Session 10 — 2026-11-23 — Verify deployed localhost references
+
+- **Time spent:** 0.1 hours (6 minutes)
+- **Goals:** Check whether localhost URLs remain active in the deployed PersonaBuilder frontend.
+- **Work completed:** Scanned the website source and production bundle. Confirmed the live bundle includes the configured Supabase project URL and publishable key, the signup email redirect option, and the PersonaBuilder production path. The remaining localhost literals are generic router and Supabase SDK fallbacks; the app does not use localhost as its configured production URL.
+- **Files / features changed:** `project_log.md`.
+- **Decisions / notes:** The current Supabase Auth Site URL and allowed redirect list are separate dashboard settings and could not be inspected without Supabase project access. No confirmation email was sent as part of this check.
+- **Blockers:** Supabase CLI access token is still missing, so the Auth URL configuration cannot be verified and backend setup remains pending.
+- **Next steps:** Authenticate the Supabase CLI with `npx supabase login`; verify the production Auth redirect allowlist and finish the database/function setup.
+
 ## Session Entry Template
 
 Copy this section for each new work session and fill it in with the work completed.
@@ -118,7 +128,7 @@ Copy this section for each new work session and fill it in with the work complet
 
 | Measure | Total |
 |---|---:|
-| Recorded project work | 5 hours 40 minutes (5.67 hours) |
+| Recorded project work | 5 hours 46 minutes (5.77 hours) |
 | Target | 30–40 hours |
 
 Update the recorded total after each work session. Exclude administrative setup such as creating this log unless it is part of substantive project work.
